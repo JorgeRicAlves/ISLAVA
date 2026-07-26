@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "title": "Islava - Mega Hair Store",
+    "description": "Islava - Mega Hair Store. Premium cuticular hair, natural, curly and straight mega hair.",
+    "keywords": "mega hair, hair extensions, ISLAVA, natural hair, tape system, keratin system"
+  },
+  "header": {
+    "email": "islava.adm@gmail.com",
+    "phone": "+351 927 444 1193",
+    "instagram": "@islava_hair",
+    "nav": {
+      "home": "Home",
+      "products": "Our Hair",
+      "gallery": "Gallery",
+      "about": "About Us",
+      "faq": "FAQ",
+      "contact": "Contact"
+    },
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchLanguage": "Switch language"
+  },
+  "hero": {
+    "title": "The Excellence of Hair!",
+    "subtitle": "ISLAVA is highly proud to provide to his clients, the BEST quality of cuticular hair.",
+    "cta": "Book Now",
+    "heroAlt": "Model with ISLAVA hair"
+  },
+  "products": {
+    "title": "Our Products",
+    "description": "Discover the exclusive collection of hair extensions that will transform your look. 100% natural, high-quality hair, ready to enhance your beauty.",
+    "tapeSystem": "TAPE SYSTEM",
+    "keratinSystem": "KERATIN SYSTEM",
+    "items": {
+      "natural": "Mega Hair Natural",
+      "curly": "Mega Hair Curly",
+      "straight": "Mega Hair Straight"
+    },
+    "prev": "Previous",
+    "next": "Next"
+  },
+  "benefits": {
+    "title": "Benefits",
+    "subtitle": "Some of Our Benefits",
+    "items": [
+      { "icon": "badge-check", "text": "No minimum order quantity" },
+      { "icon": "truck", "text": "Delivery within 48 hours" },
+      { "icon": "badge-dollar", "text": "Best prices in the premium quality market" },
+      { "icon": "repeat", "text": "Easy returns and exchanges" },
+      { "icon": "scissors", "text": "100% natural quality guarantee" },
+      { "icon": "headset", "text": "Personalized service" }
+    ]
+  },
+  "gallery": {
+    "title": "Gallery",
+    "cta": "See more",
+    "instagramAria": "See more on Instagram",
+    "openItem": "Open image",
+    "close": "Close",
+    "prev": "Previous",
+    "next": "Next",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out"
+  },
+  "about": {
+    "title": "About Us",
+    "description": "We are passionate about enhancing your beauty and well-being. Our team of professionals is dedicated to offering the best service and exceptional results. Discover what makes us the ideal choice for taking care of you and your beauty.",
+    "logoAlt": "ISLAVA logo"
+  },
+  "faq": {
+    "title": "FREQUENTLY ASKED QUESTIONS",
+    "items": [
+      {
+        "question": "What is the tape-in hair extension system?",
+        "answer": "It is a hair lengthening technique, involving the application of portions of natural hair to give an effect of length and volume."
+      },
+      {
+        "question": "How long do hair extensions last?",
+        "answer": "They can last an average of 6 months to 2 years with proper care."
+      },
+      {
+        "question": "How to take care of your hair extensions?",
+        "answer": "Use specific products, avoid excessive heat, and maintain them regularly, every 3 months at most."
+      },
+      {
+        "question": "Can I do physical activities with hair extensions?",
+        "answer": "Yes, no problem. Just keep the hair dry and tied up to avoid tangling."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message",
+    "namePlaceholder": "Johnny Doe",
+    "emailPlaceholder": "myemail@email.com",
+    "phonePlaceholder": "+351 900 000 000",
+    "messagePlaceholder": "I want to order Mega Hair",
+    "submit": "Send",
+    "mapTitle": "ISLAVA location on Google Maps",
+    "openInMaps": "Open in Google Maps",
+    "success": "Your email client has been opened. Send the message to complete your contact."
+  },
+  "footer": {
+    "linksTitle": "Useful Links",
+    "contactTitle": "Contact",
+    "aboutTitle": "About Us",
+    "about": "We are a store specialized in women's mega hair, offering high-quality products to enhance your beauty. Our mission is to provide confidence and self-esteem to our clients.",
+    "addressLabel": "Address",
+    "addressLine1": "Rua do Capitão Pombeiro, nº 283",
+    "addressLine2": "Porto",
+    "addressLine3": "Portugal",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "links": {
+      "home": "Home",
+      "products": "Products",
+      "about": "About",
+      "contact": "Contact",
+      "faq": "FAQ"
+    }
+  },
+  "whatsapp": {
+    "label": "Contact via WhatsApp",
+    "message": "Hello! I would like to know more about ISLAVA products."
+  },
+  "tape": {
+    "badge": "Coming soon to our store",
+    "titleLine1": "TAPE",
+    "titleLine2": "SYSTEM",
+    "description": "INSLAVA TAPES is the fastest method for applying hair extensions, as well as one of the safest and most profitable.",
+    "animationAlt": "Tape System animation"
+  },
+  "keratin": {
+    "titleLine1": "KERATIN",
+    "titleLine2": "SYSTEM",
+    "description": "The ISLAVA KERATIN System is the most popular hair extension attachment system, globally recognized by professionals in the field.",
+    "animationAlt": "Keratin System animation",
+    "sections": {
+      "virgin": "Virgin Hair",
+      "brown": "Brown Hair",
+      "blonde": "Blonde Hair",
+      "tipsTitle": "TIPS",
+      "tipFineTitle": "Fine Tip",
+      "tipFineDescription": "The hair extension mimics the natural growth of hair on the head, meaning each extension is made up of multiple hair lengths.",
+      "tipDoubleTitle": "Double Tip",
+      "tipDoubleDescription": "The hair extensions have a full tip with high density, giving a luxurious volume to the final application result."
+    }
+  },
+  "common": {
+    "logoAlt": "ISLAVA logo",
+    "loading": "Loading..."
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "title": "Islava - Loja de Mega Hair",
+    "description": "Islava - Loja de Mega Hair. Cabelo cuticular de elevada qualidade, mega hair natural, cacheado e liso.",
+    "keywords": "mega hair, extensões de cabelo, ISLAVA, cabelo natural, tape system, keratin system"
+  },
+  "header": {
+    "email": "islava.adm@gmail.com",
+    "phone": "+351 927 444 1193",
+    "instagram": "@islava_hair",
+    "nav": {
+      "home": "Início",
+      "products": "Nossos cabelos",
+      "gallery": "Galeria",
+      "about": "Sobre nós",
+      "faq": "FAQ",
+      "contact": "Contato"
+    },
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "switchLanguage": "Mudar idioma"
+  },
+  "hero": {
+    "title": "A Excelência dos cabelos!",
+    "subtitle": "A ISLAVA tem o imenso orgulho de prover os seus clientes, com cabelo cuticular de elevada qualidade.",
+    "cta": "Agende agora",
+    "heroAlt": "Modelo com cabelo ISLAVA"
+  },
+  "products": {
+    "title": "Nossos Produtos",
+    "description": "Descubra a coleção exclusiva de mega hair que transformará seu visual. Cabelos 100% naturais e de alta qualidade, prontos para realçar a sua beleza.",
+    "tapeSystem": "TAPE SYSTEM",
+    "keratinSystem": "KERATIN SYSTEM",
+    "items": {
+      "natural": "Mega Hair Natural",
+      "curly": "Mega Hair Cacheado",
+      "straight": "Mega Hair Liso"
+    },
+    "prev": "Anterior",
+    "next": "Seguinte"
+  },
+  "benefits": {
+    "title": "Benefícios",
+    "subtitle": "Alguns de nossos benefícios",
+    "items": [
+      { "icon": "badge-check", "text": "Sem quantidade mínima de pedido" },
+      { "icon": "truck", "text": "Entregamos em até 48 horas" },
+      { "icon": "badge-dollar", "text": "Melhores preços no mercado de qualidade premium" },
+      { "icon": "repeat", "text": "Troca e devolução facilitadas" },
+      { "icon": "scissors", "text": "Garantia de qualidade 100% natural" },
+      { "icon": "headset", "text": "Atendimento personalizado" }
+    ]
+  },
+  "gallery": {
+    "title": "Galeria",
+    "cta": "Ver mais",
+    "instagramAria": "Ver mais no Instagram",
+    "openItem": "Abrir imagem",
+    "close": "Fechar",
+    "prev": "Anterior",
+    "next": "Seguinte",
+    "zoomIn": "Ampliar",
+    "zoomOut": "Reduzir"
+  },
+  "about": {
+    "title": "Sobre nós",
+    "description": "Somos apaixonados por realçar sua beleza e bem-estar. Nossa equipe de profissionais está dedicada a oferecer o melhor atendimento e resultados excepcionais. Descubra o que faz de nós a escolha ideal para cuidar de você e de sua beleza.",
+    "logoAlt": "Logótipo ISLAVA"
+  },
+  "faq": {
+    "title": "PERGUNTAS FREQUENTES",
+    "items": [
+      {
+        "question": "O que é o sistema de tape de extensão de pelo?",
+        "answer": "São uma técnica de alongamento de cabelo, a partir da aplicação de porções de cabelo natural, que darão um efeito de comprimento e volume."
+      },
+      {
+        "question": "Quanto tempo duram as Extensões de cabelo?",
+        "answer": "Podem durar uma média de 6 meses a 2 anos, com os devidos cuidados."
+      },
+      {
+        "question": "Como cuidar das suas extensões de cabelo?",
+        "answer": "Use produtos específicos, evite calor excessivo e faça manutenção regularmente, no máximo de 3 em 3 meses."
+      },
+      {
+        "question": "Posso fazer atividades físicas com Extensões de cabelo?",
+        "answer": "Sim, sem problema, apenas mantenha os cabelos secos presos para evitar emaranhar."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "name": "Nome",
+    "email": "Email",
+    "phone": "Telefone",
+    "message": "Mensagem",
+    "namePlaceholder": "Johnny Doe",
+    "emailPlaceholder": "myemail@email.com",
+    "phonePlaceholder": "+351 900 000 000",
+    "messagePlaceholder": "Quero pedir um Mega Hair",
+    "submit": "Enviar",
+    "mapTitle": "Localização ISLAVA no Google Maps",
+    "openInMaps": "Abrir no Google Maps",
+    "success": "O seu cliente de email foi aberto. Envie a mensagem para concluir o contacto."
+  },
+  "footer": {
+    "linksTitle": "Links Úteis",
+    "contactTitle": "Contato",
+    "aboutTitle": "Sobre Nós",
+    "about": "Somos uma loja especializada em mega hair feminino, oferecendo produtos de alta qualidade para realçar sua beleza. Nossa missão é proporcionar confiança e autoestima às nossas clientes.",
+    "addressLabel": "Endereço",
+    "addressLine1": "Rua do Capitão Pombeiro, nº 283",
+    "addressLine2": "Porto",
+    "addressLine3": "Portugal",
+    "phoneLabel": "Telefone",
+    "emailLabel": "Email",
+    "links": {
+      "home": "Início",
+      "products": "Produtos",
+      "about": "Sobre",
+      "contact": "Contato",
+      "faq": "FAQ"
+    }
+  },
+  "whatsapp": {
+    "label": "Contactar via WhatsApp",
+    "message": "Olá! Gostaria de saber mais sobre os produtos ISLAVA."
+  },
+  "tape": {
+    "badge": "Em breve na nossa loja",
+    "titleLine1": "TAPE",
+    "titleLine2": "SYSTEM",
+    "description": "INSLAVA TAPES é o mais rápido método de colocação de extensões de cabelo, bem como um dos mais seguros e rentáveis.",
+    "animationAlt": "Animação Tape System"
+  },
+  "keratin": {
+    "titleLine1": "KERATIN",
+    "titleLine2": "SYSTEM",
+    "description": "O Sistema ISLAVA KERATINA, é o mais popular sistema de fixação de extensões de cabelo, mundialmente conhecido pelos profissionais da área.",
+    "animationAlt": "Animação Keratin System",
+    "sections": {
+      "virgin": "Cabelos Virgens",
+      "brown": "Cabelos Morenos",
+      "blonde": "Cabelos Louros",
+      "tipsTitle": "PONTAS",
+      "tipFineTitle": "Ponta Fina",
+      "tipFineDescription": "A Extensão de cabelo imita o crescimento natural do cabelo na cabeça, ou seja, cada extensão é constituída por múltiplos tamanhos de cabelos.",
+      "tipDoubleTitle": "Ponta Dupla",
+      "tipDoubleDescription": "As extensões de cabelo têm aponta cheia, com elevada densidade, o que atribui um volume de luxo ao resultado final da aplicação."
+    }
+  },
+  "common": {
+    "logoAlt": "Logótipo ISLAVA",
+    "loading": "A carregar..."
+  }
+}

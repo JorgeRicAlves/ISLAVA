@@ -1,0 +1,56 @@
+[
+  {
+    "type": "image",
+    "file": "gif1.gif",
+    "title_pt": "Trabalho ISLAVA 1",
+    "title_en": "ISLAVA work 1"
+  },
+  {
+    "type": "image",
+    "file": "gif2.gif",
+    "title_pt": "Trabalho ISLAVA 2",
+    "title_en": "ISLAVA work 2"
+  },
+  {
+    "type": "image",
+    "file": "product-curly.jpg",
+    "title_pt": "Mega Hair Cacheado",
+    "title_en": "Mega Hair Curly"
+  },
+  {
+    "type": "image",
+    "file": "product-straight.jpg",
+    "title_pt": "Mega Hair Liso",
+    "title_en": "Mega Hair Straight"
+  },
+  {
+    "type": "image",
+    "file": "gallery-04.jpg",
+    "title_pt": "Resultado Natural",
+    "title_en": "Natural Result"
+  },
+  {
+    "type": "image",
+    "file": "product-natural.jpg",
+    "title_pt": "Mega Hair Natural",
+    "title_en": "Mega Hair Natural"
+  },
+  {
+    "type": "image",
+    "file": "gallery-07.jpg",
+    "title_pt": "Aplicação Profissional",
+    "title_en": "Professional Application"
+  },
+  {
+    "type": "image",
+    "file": "gallery-08.jpg",
+    "title_pt": "Volume e Comprimento",
+    "title_en": "Volume and Length"
+  },
+  {
+    "type": "image",
+    "file": "gallery-09.jpg",
+    "title_pt": "Beleza Realçada",
+    "title_en": "Enhanced Beauty"
+  }
+]
