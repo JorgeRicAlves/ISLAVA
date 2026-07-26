@@ -1,5 +1,4 @@
 import { Hero } from '../components/Hero'
-import { Footer } from '../components/Footer'
 import { ProductsSection } from '../components/ProductsSection'
 import { BenefitsSection } from '../components/BenefitsSection'
 import { GallerySection } from '../components/GallerySection'
@@ -17,7 +16,6 @@ export function HomePage() {
       <AboutSection />
       <FAQSection />
       <ContactSection />
-      <Footer />
     </main>
   )
 }

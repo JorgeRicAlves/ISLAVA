@@ -56,7 +56,7 @@ export function Navbar({ variant = 'home' }: NavbarProps) {
         </div>
       )}
 
-      <Container className="relative max-w-[1440px]">
+      <Container className="relative max-w-[1440px] border-b border-secondary">
         <button
           type="button"
           className={`absolute left-0 top-6 z-30 sm:hidden ${textClass}`}
@@ -67,9 +67,7 @@ export function Navbar({ variant = 'home' }: NavbarProps) {
         </button>
 
         <nav
-          className={`relative hidden h-[80px] items-end justify-between pb-4 sm:flex ${textClass} ${
-            isHome ? 'border-b border-secondary' : 'border-b border-transparent'
-          }`}
+          className={`relative hidden h-[80px] items-end justify-between pb-4 sm:flex ${textClass}`}
         >
           <div className="flex gap-6">
             {navLinks.slice(0, 3).map((link) => (

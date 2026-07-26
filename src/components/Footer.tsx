@@ -18,15 +18,15 @@ export function Footer() {
   ]
 
   return (
-    <footer className="bg-foreground py-10 text-white">
-      <Container>
-        <div className="flex flex-wrap justify-between gap-8 sm:flex-col">
-          <div className="w-full max-w-xs sm:max-w-none">
-            <h4 className="mb-4 text-xl font-bold">{t('footer.linksTitle')}</h4>
-            <ul className="space-y-2">
+    <footer className="bg-foreground py-12 text-white">
+      <Container className="px-6 md:px-20">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
+          <div>
+            <h4 className="mb-4 text-lg font-bold">{t('footer.linksTitle')}</h4>
+            <ul className="space-y-2 text-sm text-gray-400">
               {links.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} className="transition-colors hover:text-gray-300">
+                  <a href={link.href} className="transition-colors hover:text-gray-200">
                     {link.label}
                   </a>
                 </li>
@@ -34,33 +34,39 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="w-full max-w-xs sm:max-w-none">
-            <h4 className="mb-4 text-xl font-bold">{t('footer.contactTitle')}</h4>
-            <ul className="space-y-3 text-sm">
+          <div>
+            <h4 className="mb-4 text-lg font-bold">{t('footer.contactTitle')}</h4>
+            <ul className="space-y-4 text-sm">
               <li>
                 <span className="text-gray-400">{t('footer.addressLabel')}</span>
-                <p>{t('footer.addressLine1')}</p>
-                <p>{t('footer.addressLine2')}</p>
-                <p>{t('footer.addressLine3')}</p>
+                <p className="mt-1 text-white">{t('footer.addressLine1')}</p>
+                <p className="text-white">{t('footer.addressLine2')}</p>
               </li>
               <li>
                 <span className="text-gray-400">{t('footer.phoneLabel')}</span>
-                <p>
-                  <a href="tel:+3519274441193">{t('header.phone')}</a>
+                <p className="mt-1">
+                  <a href="tel:+3519274441193" className="text-white transition-colors hover:text-gray-200">
+                    {t('header.phone')}
+                  </a>
                 </p>
               </li>
               <li>
                 <span className="text-gray-400">{t('footer.emailLabel')}</span>
-                <p>
-                  <a href={`mailto:${t('header.email')}`}>{t('header.email')}</a>
+                <p className="mt-1">
+                  <a
+                    href={`mailto:${t('header.email')}`}
+                    className="text-cyan-400 transition-colors hover:underline"
+                  >
+                    {t('header.email')}
+                  </a>
                 </p>
               </li>
             </ul>
           </div>
 
-          <div className="w-full max-w-md sm:max-w-none">
-            <h4 className="mb-4 text-xl font-bold">{t('footer.aboutTitle')}</h4>
-            <p className="text-gray-400">{t('footer.about')}</p>
+          <div>
+            <h4 className="mb-4 text-lg font-bold">{t('footer.aboutTitle')}</h4>
+            <p className="text-sm leading-relaxed text-gray-400">{t('footer.about')}</p>
           </div>
         </div>
       </Container>

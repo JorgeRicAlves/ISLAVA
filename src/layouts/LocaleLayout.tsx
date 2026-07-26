@@ -4,6 +4,7 @@ import i18n from '../i18n'
 import { isLocale } from '../types/locale'
 import { storeLocale } from '../utils/localeStorage'
 import { MetaTags } from '../components/MetaTags'
+import { Footer } from '../components/Footer'
 import { WhatsAppButton } from '../components/WhatsAppButton'
 
 export function LocaleLayout() {
@@ -24,6 +25,7 @@ export function LocaleLayout() {
     <>
       <MetaTags />
       <Outlet />
+      <Footer />
       <WhatsAppButton />
     </>
   )

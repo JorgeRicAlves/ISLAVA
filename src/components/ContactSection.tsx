@@ -95,7 +95,7 @@ export function ContactSection() {
               />
             </div>
 
-            <Button type="submit" className="w-full bg-secondary text-foreground hover:bg-card">
+            <Button type="submit" variant="submit" className="w-full">
               {t('contact.submit')}
             </Button>
 

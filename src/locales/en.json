@@ -110,15 +110,14 @@
     "about": "We are a store specialized in women's mega hair, offering high-quality products to enhance your beauty. Our mission is to provide confidence and self-esteem to our clients.",
     "addressLabel": "Address",
     "addressLine1": "Rua do Capitão Pombeiro, nº 283",
-    "addressLine2": "Porto",
-    "addressLine3": "Portugal",
+    "addressLine2": "Porto - Portugal",
     "phoneLabel": "Phone",
     "emailLabel": "Email",
     "links": {
       "home": "Home",
       "products": "Products",
-      "about": "About",
-      "contact": "Contact",
+      "about": "About Us",
+      "contact": "Get in Touch",
       "faq": "FAQ"
     }
   },

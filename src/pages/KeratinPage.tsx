@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { Navbar } from '../components/Navbar'
-import { Footer } from '../components/Footer'
+import { ProductPageHero } from '../components/ProductPageHero'
 import { Container } from '../components/Container'
 import { ContactSection } from '../components/ContactSection'
 
@@ -15,21 +14,11 @@ export function KeratinPage() {
 
   return (
     <main className="relative min-h-screen bg-foreground">
-      <Navbar variant="page" />
-
-      <section className="relative flex h-screen items-center justify-center overflow-hidden sm:items-start">
-        <h1 className="absolute translate-y-[100px] text-center font-[family-name:var(--font-display)] text-[24vw] font-bold leading-[0.8] text-secondary opacity-90 sm:text-[44vw]">
-          <span className="inline-block">{t('keratin.titleLine1')}</span>
-          <br />
-          <span className="inline-block">{t('keratin.titleLine2')}</span>
-        </h1>
-        <img
-          src="/assets/animation.gif"
-          alt={t('keratin.animationAlt')}
-          className="absolute bottom-2 z-10 w-[55px] rounded-[20px] bg-foreground object-contain sm:py-1"
-          loading="lazy"
-        />
-      </section>
+      <ProductPageHero
+        titleLine1={t('keratin.titleLine1')}
+        titleLine2={t('keratin.titleLine2')}
+        animationAlt={t('keratin.animationAlt')}
+      />
 
       <section className="bg-foreground px-14 py-12 sm:px-4">
         <Container>
@@ -105,7 +94,6 @@ export function KeratinPage() {
       </div>
 
       <ContactSection />
-      <Footer />
     </main>
   )
 }
