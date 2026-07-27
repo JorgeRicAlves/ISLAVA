@@ -56,13 +56,13 @@ export function ContactSection() {
         className="pointer-events-none absolute bottom-0 left-0 z-0 h-[200px] w-[200px] -rotate-45 scale-[7] object-cover opacity-70 invert sm:hidden"
       />
 
-      <Container className="relative z-10 flex flex-col items-stretch gap-10 lg:flex-row lg:items-center lg:gap-12">
-        <div className="w-full shrink-0 rounded-lg p-2 lg:w-1/2 lg:p-8">
-          <h2 className="mb-6 text-[clamp(48px,5vw,80px)] font-bold uppercase leading-tight sm:text-center">
-            {t('contact.title')}
-          </h2>
+      <Container className="relative z-10">
+        <h2 className="mb-6 text-[clamp(48px,5vw,80px)] font-bold uppercase leading-tight sm:text-center lg:mb-8">
+          {t('contact.title')}
+        </h2>
 
-          <form className="space-y-4" onSubmit={handleSubmit}>
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-stretch lg:gap-12">
+          <form className="flex flex-col space-y-4" onSubmit={handleSubmit}>
             <div>
               <label className="mb-1 block text-gray-700" htmlFor="contact-name">
                 {t('contact.name')}
@@ -116,7 +116,7 @@ export function ContactSection() {
               />
             </div>
 
-            <Button type="submit" variant="submit" className="w-full" disabled={isSubmitting}>
+            <Button type="submit" variant="submit" className="w-full shrink-0" disabled={isSubmitting}>
               {isSubmitting ? t('contact.submitting') : t('contact.submit')}
             </Button>
 
@@ -132,27 +132,25 @@ export function ContactSection() {
               </p>
             )}
           </form>
-        </div>
 
-        <div className="relative w-full lg:w-1/2">
-          <div className="overflow-hidden rounded-2xl bg-primary shadow-lg">
+          <div className="relative min-h-[320px] overflow-hidden rounded-2xl bg-primary shadow-lg lg:h-full lg:min-h-0">
             <iframe
               title={t('contact.mapTitle')}
               src={MAPS_EMBED_URL}
-              className="aspect-[4/3] min-h-[320px] w-full border-0 sm:min-h-[360px] lg:min-h-[480px]"
+              className="absolute inset-0 h-full w-full border-0"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               allowFullScreen
             />
+            <a
+              href={MAPS_OPEN_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="absolute bottom-3 left-3 z-10 rounded-md bg-white/95 px-3 py-1.5 text-sm font-medium text-primary underline-offset-4 shadow-sm hover:underline"
+            >
+              {t('contact.openInMaps')}
+            </a>
           </div>
-          <a
-            href={MAPS_OPEN_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-3 inline-flex text-sm font-medium text-primary underline-offset-4 hover:underline"
-          >
-            {t('contact.openInMaps')}
-          </a>
         </div>
       </Container>
     </Section>
