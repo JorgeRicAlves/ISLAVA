@@ -12,6 +12,7 @@ type IconName =
   | 'close'
   | 'chevron-left'
   | 'chevron-right'
+  | 'chevron-down'
   | 'zoom-in'
   | 'zoom-out'
 
@@ -133,6 +134,12 @@ export function Icon({ name, className = '', size = 24 }: IconProps) {
       return (
         <svg {...common}>
           <path d="m9 18 6-6-6-6" />
+        </svg>
+      )
+    case 'chevron-down':
+      return (
+        <svg {...common}>
+          <path d="m6 9 6 6 6-6" />
         </svg>
       )
     case 'zoom-in':

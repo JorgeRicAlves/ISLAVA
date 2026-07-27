@@ -10,7 +10,7 @@
     "instagram": "Islava_hair",
     "nav": {
       "home": "Início",
-      "products": "Nossos cabelos",
+      "products": "Nossos Produtos",
       "gallery": "Galeria",
       "about": "Sobre nós",
       "faq": "FAQ",
@@ -96,12 +96,16 @@
     "message": "Mensagem",
     "namePlaceholder": "Johnny Doe",
     "emailPlaceholder": "myemail@email.com",
-    "phonePlaceholder": "+351 900 000 000",
+    "phonePlaceholder": "900 000 000",
     "messagePlaceholder": "Quero pedir um Mega Hair",
-    "submit": "Enviar",
+    "countryCode": "Indicativo do país",
+    "submit": "Enviar mensagem",
+    "submitting": "A enviar...",
     "mapTitle": "Localização ISLAVA no Google Maps",
     "openInMaps": "Abrir no Google Maps",
-    "success": "O seu cliente de email foi aberto. Envie a mensagem para concluir o contacto."
+    "success": "A sua mensagem foi enviada com sucesso. Entraremos em contacto em breve.",
+    "mailtoFallback": "Não foi possível enviar automaticamente. O seu cliente de email foi aberto para concluir o envio.",
+    "error": "Não foi possível enviar a mensagem. Tente novamente ou contacte-nos diretamente por email."
   },
   "footer": {
     "linksTitle": "Links Úteis",

@@ -1,11 +1,12 @@
 import { useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Icon } from './Icon'
 import { LanguageSwitcher } from './LanguageSwitcher'
 import { Container } from './Container'
 import { isLocale } from '../types/locale'
 import { INSTAGRAM_URL } from '../utils/links'
+import { scrollToSection } from '../utils/scrollTo'
 
 interface NavbarProps {
   variant?: 'home' | 'page'
@@ -13,6 +14,7 @@ interface NavbarProps {
 
 export function Navbar({ variant = 'home' }: NavbarProps) {
   const { locale } = useParams()
+  const location = useLocation()
   const { t } = useTranslation()
   const [menuOpen, setMenuOpen] = useState(false)
   const currentLocale = isLocale(locale) ? locale : 'pt'
@@ -20,15 +22,28 @@ export function Navbar({ variant = 'home' }: NavbarProps) {
   const textClass = 'text-background'
   const headerBg = isHome ? 'bg-transparent' : 'bg-foreground'
   const homePath = `/${currentLocale}`
+  const isOnHomePage = location.pathname === homePath
 
   const navLinks = [
-    { href: `${homePath}#home`, label: t('header.nav.home') },
-    { href: `${homePath}#products`, label: t('header.nav.products') },
-    { href: `${homePath}#gallery`, label: t('header.nav.gallery') },
-    { href: `${homePath}#about`, label: t('header.nav.about') },
-    { href: `${homePath}#faq`, label: t('header.nav.faq') },
-    { href: `${homePath}#contact`, label: t('header.nav.contact') },
+    { section: 'home', label: t('header.nav.home') },
+    { section: 'products', label: t('header.nav.products') },
+    { section: 'gallery', label: t('header.nav.gallery') },
+    { section: 'about', label: t('header.nav.about') },
+    { section: 'faq', label: t('header.nav.faq') },
+    { section: 'contact', label: t('header.nav.contact') },
   ]
+
+  const handleSectionClick = (section: string) => {
+    setMenuOpen(false)
+
+    if (isOnHomePage) {
+      scrollToSection(section)
+      window.history.replaceState(null, '', `${homePath}#${section}`)
+    }
+  }
+
+  const linkClassName =
+    'border-b-2 border-transparent pb-1 transition-colors hover:border-background'
 
   return (
     <header key={currentLocale} className={`absolute top-0 z-20 w-full ${headerBg}`}>
@@ -69,24 +84,26 @@ export function Navbar({ variant = 'home' }: NavbarProps) {
         >
           <div className="flex gap-6">
             {navLinks.slice(0, 3).map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="border-b-2 border-transparent pb-1 transition-colors hover:border-background"
+              <Link
+                key={link.section}
+                to={`${homePath}#${link.section}`}
+                className={linkClassName}
+                onClick={() => handleSectionClick(link.section)}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
           <div className="flex gap-6">
             {navLinks.slice(3).map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="border-b-2 border-transparent pb-1 transition-colors hover:border-background"
+              <Link
+                key={link.section}
+                to={`${homePath}#${link.section}`}
+                className={linkClassName}
+                onClick={() => handleSectionClick(link.section)}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             <LanguageSwitcher />
           </div>
@@ -104,14 +121,14 @@ export function Navbar({ variant = 'home' }: NavbarProps) {
         <nav className={`border-t border-secondary/30 bg-foreground px-4 py-4 sm:hidden ${textClass}`}>
           <div className="flex flex-col gap-3">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
+              <Link
+                key={link.section}
+                to={`${homePath}#${link.section}`}
                 className="border-b border-secondary/20 py-2"
-                onClick={() => setMenuOpen(false)}
+                onClick={() => handleSectionClick(link.section)}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             <LanguageSwitcher />
           </div>

@@ -17,26 +17,28 @@ export function ProductPageHero({
     <>
       <Navbar variant="page" />
 
-      <section className="relative flex min-h-[420px] flex-col items-center justify-center px-4 pb-20 pt-32 sm:min-h-[320px] sm:px-6 sm:pb-16 sm:pt-28">
-        {badge && (
-          <span className="absolute right-[6%] top-[22%] max-w-[180px] rounded-3xl border border-secondary bg-foreground px-4 py-5 text-center font-[family-name:var(--font-body)] text-sm font-light leading-snug text-secondary sm:static sm:mb-5 sm:max-w-none sm:px-5 sm:py-4 sm:text-base">
-            {badge}
-          </span>
-        )}
+      <section className="relative flex flex-col items-center justify-start px-4 pb-16 pt-44 md:px-6 md:pb-20 md:pt-52">
+        <div className="flex w-full max-w-6xl flex-col items-center text-center">
+          <h1 className="flex w-full flex-col items-center font-[family-name:var(--font-display)] font-bold leading-[0.85] tracking-wide text-secondary">
+            <span className="whitespace-nowrap text-[clamp(4.5rem,22vw,7rem)] md:text-[clamp(5.5rem,20vw,14rem)]">
+              {titleLine1}
+            </span>
+            <span className="whitespace-nowrap text-[clamp(4.5rem,22vw,7rem)] md:text-[clamp(5.5rem,20vw,14rem)]">
+              {titleLine2}
+            </span>
+          </h1>
 
-        <h1 className="flex w-full max-w-5xl flex-col items-center text-center font-[family-name:var(--font-display)] font-bold leading-[0.85] tracking-wide text-secondary">
-          <span className="whitespace-nowrap text-[clamp(2.75rem,10vw,7rem)] sm:text-[clamp(2.25rem,11vw,3.5rem)]">
-            {titleLine1}
-          </span>
-          <span className="whitespace-nowrap text-[clamp(2.75rem,10vw,7rem)] sm:text-[clamp(2.25rem,11vw,3.5rem)]">
-            {titleLine2}
-          </span>
-        </h1>
+          {badge && (
+            <span className="mt-5 max-w-xs rounded-3xl border border-secondary bg-foreground px-5 py-4 text-center font-[family-name:var(--font-body)] text-sm font-light leading-snug text-secondary md:mt-6 md:max-w-md md:px-6 md:py-5 md:text-base">
+              {badge}
+            </span>
+          )}
+        </div>
 
         <img
           src="/assets/animation.gif"
           alt={animationAlt}
-          className="absolute bottom-4 w-[55px] rounded-[20px] bg-foreground object-contain sm:bottom-3"
+          className="mt-10 w-[55px] rounded-[20px] bg-foreground object-contain md:mt-12"
           loading="lazy"
         />
       </section>

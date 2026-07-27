@@ -3,26 +3,48 @@ import { useTranslation } from 'react-i18next'
 import { Button } from './Button'
 import { Container } from './Container'
 import { Section } from './Section'
+import { PhoneField } from './PhoneField'
 import { MAPS_EMBED_URL, MAPS_OPEN_URL } from '../utils/maps'
+import { sendContactEmail } from '../services/contactService'
+import { defaultCountryIso, findCountryByIso } from '../data/countryDialCodes'
 
 export function ContactSection() {
   const { t } = useTranslation()
-  const [submitted, setSubmitted] = useState(false)
+  const [countryIso, setCountryIso] = useState(defaultCountryIso)
+  const [phoneNumber, setPhoneNumber] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [status, setStatus] = useState<'idle' | 'sent' | 'mailto'>('idle')
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    const form = new FormData(event.currentTarget)
-    const name = String(form.get('name') ?? '')
-    const email = String(form.get('email') ?? '')
-    const phone = String(form.get('phone') ?? '')
-    const message = String(form.get('message') ?? '')
+    setIsSubmitting(true)
+    setStatus('idle')
 
-    const body = encodeURIComponent(
-      `${t('contact.message')}: ${message}\n${t('contact.phone')}: ${phone}`,
-    )
-    const subject = encodeURIComponent(`${t('contact.title')} - ${name}`)
-    window.location.href = `mailto:${t('header.email')}?subject=${subject}&body=${body}&cc=${encodeURIComponent(email)}`
-    setSubmitted(true)
+    const form = new FormData(event.currentTarget)
+    const name = String(form.get('name') ?? '').trim()
+    const email = String(form.get('email') ?? '').trim()
+    const message = String(form.get('message') ?? '').trim()
+    const dialCode = findCountryByIso(countryIso).dial
+    const fullPhone = phoneNumber.trim() ? `${dialCode} ${phoneNumber.trim()}` : ''
+
+    try {
+      const result = await sendContactEmail({
+        name,
+        email,
+        phone: fullPhone,
+        message,
+        subject: `${t('contact.title')} - ${name}`,
+      })
+
+      setStatus(result)
+      if (result === 'sent') {
+        event.currentTarget.reset()
+        setPhoneNumber('')
+        setCountryIso(defaultCountryIso)
+      }
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -73,12 +95,11 @@ export function ContactSection() {
               <label className="mb-1 block text-gray-700" htmlFor="contact-phone">
                 {t('contact.phone')}
               </label>
-              <input
-                id="contact-phone"
-                name="phone"
-                type="tel"
-                placeholder={t('contact.phonePlaceholder')}
-                className="h-[50px] w-full rounded-lg border border-gray-300 bg-gray-100 px-4 focus:border-blue-500 focus:outline-none"
+              <PhoneField
+                countryIso={countryIso}
+                phoneNumber={phoneNumber}
+                onCountryChange={setCountryIso}
+                onPhoneNumberChange={setPhoneNumber}
               />
             </div>
 
@@ -95,13 +116,19 @@ export function ContactSection() {
               />
             </div>
 
-            <Button type="submit" variant="submit" className="w-full">
-              {t('contact.submit')}
+            <Button type="submit" variant="submit" className="w-full" disabled={isSubmitting}>
+              {isSubmitting ? t('contact.submitting') : t('contact.submit')}
             </Button>
 
-            {submitted && (
-              <p className="text-sm text-muted" role="status">
+            {status === 'sent' && (
+              <p className="text-sm text-primary" role="status">
                 {t('contact.success')}
+              </p>
+            )}
+
+            {status === 'mailto' && (
+              <p className="text-sm text-muted" role="status">
+                {t('contact.mailtoFallback')}
               </p>
             )}
           </form>
