@@ -32,29 +32,27 @@ export function Navbar({ variant = 'home' }: NavbarProps) {
 
   return (
     <header key={currentLocale} className={`absolute top-0 z-20 w-full ${headerBg}`}>
-      {!isHome && (
-        <div className="hidden min-h-10 items-center bg-topbar text-white sm:flex">
-          <Container className="flex justify-end gap-12 py-2 text-sm font-extralight">
-            <a href={`mailto:${t('header.email')}`} className="flex items-center gap-2 hover:text-gray-300">
-              <Icon name="mail" size={20} />
-              <span>{t('header.email')}</span>
-            </a>
-            <a href="tel:+3519274441193" className="flex items-center gap-2 hover:text-gray-300">
-              <Icon name="phone" size={20} />
-              <span>{t('header.phone')}</span>
-            </a>
-            <a
-              href={INSTAGRAM_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center gap-2 hover:text-gray-300"
-            >
-              <Icon name="instagram" size={20} />
-              <span>{t('header.instagram')}</span>
-            </a>
-          </Container>
-        </div>
-      )}
+      <div className="hidden min-h-10 items-center bg-topbar text-white sm:flex">
+        <Container className="flex justify-end gap-12 py-2 text-sm font-extralight">
+          <a href={`mailto:${t('header.email')}`} className="flex items-center gap-2 hover:text-gray-300">
+            <Icon name="mail" size={20} />
+            <span>{t('header.email')}</span>
+          </a>
+          <a href="tel:+3519274441193" className="flex items-center gap-2 hover:text-gray-300">
+            <Icon name="phone" size={20} />
+            <span>{t('header.phone')}</span>
+          </a>
+          <a
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 hover:text-gray-300"
+          >
+            <Icon name="instagram" size={20} />
+            <span>{t('header.instagram')}</span>
+          </a>
+        </Container>
+      </div>
 
       <Container className="relative max-w-[1440px] border-b border-secondary">
         <button
